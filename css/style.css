@@ -1,0 +1,18 @@
+body {
+    display: grid;
+    place-content: center;
+}
+main {
+    --card-width: 30rem;
+    width: var(--card-width);
+    height: calc(var(--card-width) / 1.75);/* 1.75 ratio */
+    border-radius: 5px;
+    background-color: gainsboro;
+}
+@media (min-width: 1920px) {
+    main {
+        
+        width: min(50vw, 50rem);
+        height: min(50vh, 28rem);
+    }
+}
