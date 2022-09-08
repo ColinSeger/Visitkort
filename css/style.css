@@ -1,18 +1,31 @@
 body {
     display: grid;
     place-content: center;
+    background-color: gray;
 }
-main {
+
+.card {
     --card-width: 30rem;
     width: var(--card-width);
-    height: calc(var(--card-width) / 1.75);/* 1.75 ratio */
-    border-radius: 5px;
+    height: calc(var(--card-width) / 1.75);
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: .5rem;
     background-color: gainsboro;
+    transition: width .3s ease-in-out, height .3s ease-in-out;
 }
-@media (min-width: 1920px) {
-    main {
+.cardImage {
+    width: 30%;
+}
+
+@media (max-width: 32rem) {
+    .card {
+        --card-width: 17rem;
+        height: calc(var(--card-width) * 1.75);
+    }
+}
+@media (min-width: 32rem) {
+    .card {
         
-        width: min(50vw, 50rem);
-        height: min(50vh, 28rem);
     }
 }
